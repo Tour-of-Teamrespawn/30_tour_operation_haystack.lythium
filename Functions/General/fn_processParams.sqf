@@ -52,21 +52,21 @@ if (isMultiplayer) then
 	TOUR_respawnTickets = [1,1,1,1];
 
 	//View Distance
-	TOUR_viewDistance = 2500;
+	TOUR_viewDistance = 3000;
 
 	//Time of Day
 	TOUR_TOD = 0;
 
-	A455_MOONPHASE = 1;
+	A455_MOONPHASE = 16; // 1, 8 or 16
 
 	//Fog
-	A455_FOG = 0.25;
+	A455_FOG = 0;
 
 	//Overcast
-	A455_OVERCAST = 0.25;
+	A455_OVERCAST = 0;
 
 	//Debug mode
-	A455_DEBUG_MODE = false;
+	A455_DEBUG_MODE = true;
 };
 
 if (isServer) then {

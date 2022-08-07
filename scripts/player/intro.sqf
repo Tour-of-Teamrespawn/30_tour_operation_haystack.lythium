@@ -142,7 +142,7 @@ if (!isDedicated) then {
     _text_1 = "2nd platoon";
     _text_2 = "Power Surge";
     sleep 2;
-    [_text_1, _text_date, _text_2] spawn A455_fnc_infotext;
+    _nil = [_text_1, _text_date, _text_2] spawn A455_fnc_infotext;
     
     // when the player moves out, give nice text to remind of the mission, like a film intro
     waitUntil { getmarkerPos "TOUR_mkr_Start" distance vehicle player > 300 };

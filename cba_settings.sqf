@@ -52,21 +52,6 @@ force ace_advanced_ballistics_enabled = true;
 force ace_advanced_ballistics_muzzleVelocityVariationEnabled = true;
 force ace_advanced_ballistics_simulationInterval = 0.05;
 
-// ACE Artillery
-force ace_artillerytables_advancedCorrections = true;
-force ace_artillerytables_disableArtilleryComputer = true;
-force ace_mk6mortar_airResistanceEnabled = false;
-force ace_mk6mortar_allowCompass = true;
-force ace_mk6mortar_allowComputerRangefinder = true;
-force ace_mk6mortar_useAmmoHandling = false;
-
-// ACE Headless
-force acex_headless_delay = 15;
-force acex_headless_enabled = false;
-force acex_headless_endMission = 0;
-force acex_headless_log = false;
-force acex_headless_transferLoadout = 0;
-
 // ACE Medical
 ace_medical_ai_enabledFor = 2;
 ace_medical_AIDamageThreshold = 1;
