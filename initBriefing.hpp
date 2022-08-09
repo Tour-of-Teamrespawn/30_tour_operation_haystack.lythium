@@ -17,10 +17,17 @@ PRC152 (Long range) = PTT 2 / Right ear<br/><br/>
 "]];  
 
 player createDiaryRecord ["Diary", ["Logistics", "
-You have the following assets to your disposal:<br/>
+You have the following helicopters at your disposal:<br/>
 -3x MH-6M Little Bird transport helicopter (2x pilot seats + 7x cargo)<br/>
 -1x AH-6M (M134 + Hydra)<br/>
--1x AH-6M (GAU-19)<br/>
+-1x AH-6M (GAU-19)<br/><br/>
+
+You have the following vehicles at your disposal:<br/>
+-3x MRZR 4 cars (unarmed)<br/>
+-2x M1238A1 MRAPs (unarmed)<br/>
+-1x M1165A1 Humvee (Mk19 + M240)<br/>
+-1x M1165A1 Humvee (M134 + M240)<br/>
+-1x M1165A1 Humvee (M2 + M240)<br/>
 -1x M939 refueling truck<br/>
 -1x M939 repair truck<br/>
 -1x M939 ammo truck<br/><br/>
@@ -30,19 +37,23 @@ Assigned AH-6M only, no additional CAS at this time.<br/><br/>
 
 Fire Support:<br/>
 Not available at this time.<br/><br/>
+
+Resupply:<br/>
+-1x M939 ammo truck (with AH-6M ammo)<br/>
+-Infantry weapons, ammunition and equipment at the <marker name='mkr_ammo'>ammo dump</marker>.<br/><br/>
 "]]; 
 
 player createDiaryRecord ["Diary", ["Execution", "
-You are to brief your teams and head out from <marker name='mkr_airbase'>Kinduf airbase</marker> by helicopter as soon as possible.<br/><br/>
+You are to brief your teams and head out from <marker name='mkr_fob'>FOB Fabiano</marker> by helicopter as soon as possible.<br/><br/>
 All aerial assets will begin the search of the AO, specific as determined by special operations command team SHEPHERD.<br/><br/>
-Ayman al-Arshad is to be secured and transported back to the airbase via helicopter.<br/>If Ayman is killed while attempting capture, search his person and any vehicles for intelligence that may be of use.<br/><br/>
+Ayman al-Arshad is to be secured and transported back to FOB Fabiano via helicopter.<br/>If Ayman is killed while attempting capture, search his person and any vehicles for intelligence that may be of use.<br/><br/>
 "]];
 
 player createDiaryRecord ["Diary", ["Mission", "
-You will be flying out of the <marker name='mkr_airbase'>Kinduf airbase</marker>.
+You will be flying out of the <marker name='mkr_fob'>FOB Fabiano</marker>.
 Your mission is to find and capture the leader of the Al-Shabab, Ayman al-Arshad. He is to be brought in alive for questioning, so don't get too trigger happy!<br/><br/>
 You must ensure no civilians are harmed during this operation, we need to show the locals that we are here to help.<br/><br/>
-The mission can be aborted at your disgression by reporting into the <marker name='mkr_co'>CO</marker> back at the airbase.<br/><br/>
+The mission can be aborted at your disgression by reporting into the <marker name='mkr_co'>CO</marker> back at the FOB.<br/><br/>
 "]];
 
 _vehicleColour = "red";

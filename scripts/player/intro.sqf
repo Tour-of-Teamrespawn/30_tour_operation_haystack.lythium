@@ -14,11 +14,11 @@ if (!isDedicated) then {
     sleep 1;
     // define map positions for camera [x, y, z]
     _pos1 = [getmarkerPos "TOUR_mkr_introStart" select 0, getmarkerPos "TOUR_mkr_introStart" select 1, 50];
-    _pos2 = [11898.3, 5290.52, 0];
-    _pos3 = [(player getPos [20, (getDir player) + 180]) select 0, (player getPos [20, (getDir player) + 180]) select 1, 15];
+    _pos2 = [15823,5611.21,0];
+    _pos3 = [(player getPos [10, (getDir player) + 180]) select 0, (player getPos [10, (getDir player) + 180]) select 1, 15];
     _pos4 = [getPos player select 0, getPos player select 1, ((getPos player select 2) + 1.85)];
     // play intro music
-    playSound "toUR_introMusic";
+    playSound "TOUR_introMusic";
     // create camera and set first position and where it is looking.
     _cam1 = "camera" camCreate _pos1;
     _cam1 camPrepareTarget _pos2;
@@ -43,19 +43,19 @@ if (!isDedicated) then {
     []spawn
     {
         sleep 5;
-        _text = ["L", "i", "v", "o", "n", "i", "a", "\n", "P", "o", "i", "n", "t", " ", "B", "e", "a", "r"];
+        _text = ["A", "f", "g", "h", "a", "n", "i", "s", "t", "a", "n", "\n", "F", "O", "B", " ", "F", "a", "b", "i", "a", "n", "o"];
         _display = "";
         _pointer = 0;
         _sleeptime = 0.1;
         while {_pointer < count _text} do {
             _sleeptime = 0.1 + (random 0.05);
             _display = _display + (_text select _pointer);
-            titleText [_display, "PLAin down", _sleeptime];
+            titleText [_display, "Plain down", _sleeptime];
             _pointer = _pointer + 1;
             if (_pointer == count _text) then {
-                cuttext [_display, "PLAin down", 1];
+                cuttext [_display, "Plain down", 1];
             } else {
-                playSound "toUR_key_noise";
+                playSound "TOUR_key_noise";
             };
             sleep _sleeptime;
         };
@@ -82,19 +82,19 @@ if (!isDedicated) then {
     // more text type to run in parallel
     []spawn
     {
-        _text = ["R", "o", "y", "a", "l", " ", "M", "a", "r", "i", "n", "e", " ", "C", "o", "m", "m", "a", "n", "d", "o", "s"];
+        _text = ["U", "S", " ", "A", "r", "m", "e", "d", " ", "F", "o", "r", "c", "e", "s"];
         _display = "";
         _pointer = 0;
         _sleeptime = 0.1;
         while {_pointer < count _text} do {
             _sleeptime = 0.1 + (random 0.05);
             _display = _display + (_text select _pointer);
-            titleText [_display, "PLAin down", _sleeptime];
+            titleText [_display, "Plain down", _sleeptime];
             _pointer = _pointer + 1;
             if (_pointer == count _text) then {
-                cuttext [_display, "PLAin down", 1];
+                cuttext [_display, "Plain down", 1];
             } else {
-                playSound "toUR_key_noise";
+                playSound "TOUR_key_noise";
             };
             sleep _sleeptime;
         };
@@ -139,13 +139,13 @@ if (!isDedicated) then {
             _text_date = format ["%1-%2-%3 %4h%5m", _month, _day, _year, _hour, _min];
         };
     };
-    _text_1 = "2nd platoon";
-    _text_2 = "Power Surge";
+    _text_1 = "1st Battalion";
+    _text_2 = "Operation Haystack";
     sleep 2;
     _nil = [_text_1, _text_date, _text_2] spawn A455_fnc_infotext;
     
     // when the player moves out, give nice text to remind of the mission, like a film intro
     waitUntil { getmarkerPos "TOUR_mkr_Start" distance vehicle player > 300 };
-    private _text = "<t font='PuristaBold' size='1.6'>30 [tour] Power Surge</t><br />by andy455 [tour]";
+    private _text = "<t font='PuristaBold' size='1.6'>30 [Tour] Operation Haystack</t><br />by Andy455 [Tour]";
     [parsetext _text, true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
 };

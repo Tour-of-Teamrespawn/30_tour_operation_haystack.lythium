@@ -11,7 +11,6 @@ player playaction "stand";
 
 if (!A455_DEBUG_MODE) then {
 	_int = execVM "scripts\player\intro.sqf";
-	// waitUntil { scriptDone _int };
 };
 
 waitUntil { !isNil { player getVariable "A455_GROUP" }; };

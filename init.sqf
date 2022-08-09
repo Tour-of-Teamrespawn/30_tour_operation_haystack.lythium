@@ -21,7 +21,6 @@ private _0 = addMissionEventHandler ["Ended", {
 	diag_log text "";
 }];
 
-
 private _pp = [] spawn A455_fnc_processParams;
 waitUntil {scriptDone _pp};
 
