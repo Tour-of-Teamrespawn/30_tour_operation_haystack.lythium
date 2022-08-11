@@ -1,7 +1,11 @@
 A455_INTRO_DONE = false; publicVariable "A455_INTRO_DONE";
 A455_CAPTURED = false; publicVariable "A455_CAPTURED";
 
-
+// Set random AO position, based on AO size
+A455_AO_CENTRE = [[[[(worldSize / 2), (worldsize / 2), 0], (10000 - A455_AO_SIZE)]]] call BIS_fnc_randomPos;
+publicVariable "A455_AO_CENTRE";
+"mkr_ao" setMarkerPos A455_AO_CENTRE;
+"mkr_ao" setMarkerSize [A455_AO_SIZE, A455_AO_SIZE];
 
 call A455_fnc_setupTasks;
 call A455_fnc_setupInsurgentLeader;

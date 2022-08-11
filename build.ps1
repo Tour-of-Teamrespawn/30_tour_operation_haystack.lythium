@@ -87,12 +87,25 @@ if ($decision -eq 0) {
         catch { throw "Failed to overwrite init.sqf with version tag. You may need to close the file and re-run the build script." }
         Write-Host "Overwrote init.sqf with version tag successfully"
 
-        $DescriptionEXT = Get-Content -Path (Join-Path -Path $ProjectRoot -ChildPath 'description.ext') -Raw
-        $NewDescriptionEXT = $DescriptionEXT -replace ([regex]::Escape($MissionName_withV) + "\d+\.\d+"), ($MissionName_withV + $NewVersion)
-        try { [System.IO.File]::WriteAllLines((Join-Path -Path $ProjectRoot -ChildPath 'description.ext'), $NewDescriptionEXT) }
-        catch { throw "Failed to overwrite description.ext with version tag. You may need to close the file and re-run the build script." }
-        Write-Host "Overwrote description.ext with version tag successfully"
+        $ExtensionsToCheck = @('.sqf', '.cpp', '.hpp', '.ext', '.sqs', '.txt', '.md')
+        $allFilesToCheck = Get-ChildItem -Path $ProjectRoot -File -Recurse | Where-Object 'Extension' -in $ExtensionsToCheck
 
+        foreach ($file in $allFilesToCheck) {
+            $matches = $null
+            $FileContents = Get-Content -Path $File.FullName -Raw
+
+            if ($FileContents -match ([regex]::Escape($MissionName_withV) + "\d+\.\d+")) {
+
+                $NewFileContents = $FileContents -replace ([regex]::Escape($MissionName_withV) + "\d+\.\d+"), ($MissionName_withV + $NewVersion)
+                try { [System.IO.File]::WriteAllLines($File.FullName, $NewFileContents) }
+                catch { throw "Failed to overwrite $($File.Name) with version tag. You may need to close the file and re-run the build script." }
+                Write-Host "Overwrote $($File.Name) with version tag successfully"
+
+            }
+            else {
+                Write-Verbose "$($File.Name) did not have a matched version. Skipping..."
+            }
+        }
     }
     else {
         Write-Warning "Version missing from init.sqf. For automatic version increments add a block comment somewhere in your init.sqf with a line exactly like so: '###MISSION_VERSION 0.1'"
@@ -186,7 +199,8 @@ if ($decision -eq 0) {
     if ($null -eq $NewPBO) {
         Write-Host "NewPBO not found (didn't increment?) using last modified PBO in output folder for server config"
         $NewPBO = Get-ChildItem -Path $OutputPath -Filter '*.pbo' | sort-object -Property 'LastWriteTime' -Descending | Select-Object -First 1
-    } else {
+    }
+    else {
         Write-Host "Using new PBO with incremented version in server config."
     }
 

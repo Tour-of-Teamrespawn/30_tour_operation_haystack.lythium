@@ -26,4 +26,3 @@ waitUntil {scriptDone _pp};
 
 private _svd = [250, TOUR_viewDistance, 20, 0.05] spawn A455_fnc_setViewDistance;
 waitUntil {scriptDone _svd};
-

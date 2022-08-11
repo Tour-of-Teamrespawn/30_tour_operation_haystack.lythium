@@ -35,8 +35,10 @@ if (isMultiplayer) then
 		case 4: { A455_OVERCAST = 1; };
 	};
 
+	A455_AO_SIZE = paramsArray select 7;
+
 	//Debug mode
-	if (paramsArray select 7 == 0) then {
+	if (paramsArray select 8 == 0) then {
 		A455_DEBUG_MODE = false;
 	} else {
 		A455_DEBUG_MODE = true;
@@ -64,6 +66,9 @@ if (isMultiplayer) then
 
 	//Overcast
 	A455_OVERCAST = 0;
+
+	// AO radius
+	A455_AO_SIZE = 5000;
 
 	//Debug mode
 	A455_DEBUG_MODE = true;
