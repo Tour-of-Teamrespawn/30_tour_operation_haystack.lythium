@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=2640;
+		nextID=2641;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=53;
+		nextID=57;
 	};
 	class Camera
 	{
-		pos[]={15837.86,57.113922,5595.6377};
-		dir[]={0.70492655,-0.31060621,0.63765377};
-		up[]={0.23034786,0.95053864,0.20836522};
-		aside[]={0.67083406,0,-0.74160743};
+		pos[]={15814.552,82.817169,5528.6841};
+		dir[]={-0.23246057,-0.59055167,0.77280086};
+		up[]={-0.17011034,0.80699933,0.56552142};
+		aside[]={0.95761895,7.9788151e-008,0.28805423};
 	};
 };
 binarizationWanted=0;
@@ -462,7 +462,7 @@ class Mission
 			name="Players";
 			class Entities
 			{
-				items=9;
+				items=10;
 				class Item0
 				{
 					dataType="Layer";
@@ -494,8 +494,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="MELB_SN_Nose";
-									expression="_this animate ['hide_SN_nose',_value,true]";
+									property="MELB_clan";
+									expression="_this animate ['hide_clan',_value,true]";
 									class Value
 									{
 										class data
@@ -551,8 +551,8 @@ class Mission
 								};
 								class Attribute3
 								{
-									property="MELB_clan";
-									expression="_this animate ['hide_clan',_value,true]";
+									property="MELB_SN_Nose";
+									expression="_this animate ['hide_SN_nose',_value,true]";
 									class Value
 									{
 										class data
@@ -772,8 +772,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="MELB_clan";
-									expression="_this animate ['hide_clan',_value,true]";
+									property="MELB_SN_Nose";
+									expression="_this animate ['hide_SN_nose',_value,true]";
 									class Value
 									{
 										class data
@@ -848,8 +848,8 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="MELB_SN_Nose";
-									expression="_this animate ['hide_SN_nose',_value,true]";
+									property="MELB_clan";
+									expression="_this animate ['hide_clan',_value,true]";
 									class Value
 									{
 										class data
@@ -891,8 +891,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="MELB_SN_Nose";
-									expression="_this animate ['hide_SN_nose',_value,true]";
+									property="MELB_clan";
+									expression="_this animate ['hide_clan',_value,true]";
 									class Value
 									{
 										class data
@@ -967,8 +967,8 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="MELB_clan";
-									expression="_this animate ['hide_clan',_value,true]";
+									property="MELB_SN_Nose";
+									expression="_this animate ['hide_SN_nose',_value,true]";
 									class Value
 									{
 										class data
@@ -1011,8 +1011,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="MELB_clan";
-									expression="_this animate ['hide_clan',_value,true]";
+									property="MELB_SN_Nose";
+									expression="_this animate ['hide_SN_nose',_value,true]";
 									class Value
 									{
 										class data
@@ -1087,8 +1087,8 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="MELB_SN_Nose";
-									expression="_this animate ['hide_SN_nose',_value,true]";
+									property="MELB_clan";
+									expression="_this animate ['hide_clan',_value,true]";
 									class Value
 									{
 										class data
@@ -1954,7 +1954,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={15774.587,28.449009,5597.4365};
+						position[]={15779.912,28.653938,5595.2627};
 						angles[]={0.031335093,0,0.025685415};
 					};
 					name="supportCompany";
@@ -1977,7 +1977,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="missionConfigFile >> ""CfgORBAT"" >> ""b_5th_sfg"" >> ""1stBat"" >> ""supportCompany""";
+									value="missionConfigFile >> ""CfgORBAT"" >> ""USA"" >> ""b_5th_sfg"" >> ""1stBat"" >> ""supportCompany""";
 								};
 							};
 						};
@@ -2015,7 +2015,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="missionConfigFile >> ""CfgORBAT"" >> ""b_5th_sfg""";
+									value="missionConfigFile >> ""CfgORBAT"" >> ""USA""";
 								};
 							};
 						};
@@ -2046,8 +2046,8 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={15822.487,28.174433,5636.5522};
-						angles[]={0.018772135,0.99818099,6.2721424};
+						position[]={15822.487,28.174433,5636.5518};
+						angles[]={0.018779742,0.99818873,6.2721372};
 					};
 					name="charlieCompany";
 					id=2035;
@@ -2069,7 +2069,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="missionConfigFile >> ""CfgORBAT"" >> ""b_5th_sfg"" >> ""1stBat"" >> ""charlieCompany""";
+									value="missionConfigFile >> ""CfgORBAT"" >> ""USA"" >> ""b_5th_sfg"" >> ""1stBat"" >> ""charlieCompany""";
 								};
 							};
 						};
@@ -2107,7 +2107,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="missionConfigFile >> ""CfgORBAT"" >> ""b_5th_sfg""";
+									value="missionConfigFile >> ""CfgORBAT"" >> ""USA""";
 								};
 							};
 						};
@@ -4295,9 +4295,101 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item9
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={15810.018,29.679789,5571.9521};
+						angles[]={0.03536433,0,6.2706985};
+					};
+					name="cia";
+					id=2640;
+					type="ModuleStrategicMapORBAT_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleStrategicMapORBAT_F_Path";
+							expression="_this setVariable ['Path',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="missionConfigFile >> ""CfgORBAT"" >> ""USA"" >> ""cia"" >> ""SENIOR""";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleStrategicMapORBAT_F_Tags";
+							expression="_this setVariable ['Tags',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleStrategicMapORBAT_F_Parent";
+							expression="_this setVariable ['Parent',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="missionConfigFile >> ""CfgORBAT"" >> ""USA""";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleStrategicMapORBAT_F_Tiers";
+							expression="_this setVariable ['Tiers',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
 			};
 			id=139;
-			atlOffset=0.12187195;
+			atlOffset=0.11809921;
 		};
 		class Item1
 		{
@@ -4357,8 +4449,8 @@ class Mission
 							{
 								skill=1;
 								rank="MAJOR";
-								name="insurgentLeader";
 								init="this setIdentity ""FahimalArshad"";";
+								name="insurgentLeader";
 								class Inventory
 								{
 									class primaryWeapon

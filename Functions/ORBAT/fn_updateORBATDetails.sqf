@@ -4,21 +4,21 @@ private ["_company", "_type", "_id", "_size", "_icon", "_commander", "_commander
 if (leader group _unit != _unit) exitWith {false;};
 
 _company = "supportCompany";
-if ( !isNil { (missionConfigFile >> "CfgORBAT" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "type") call BIS_fnc_getCfgData } ) then {
-	_type = (missionConfigFile >> "CfgORBAT" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "type") call BIS_fnc_getCfgData
+if ( !isNil { (missionConfigFile >> "CfgORBAT" >> "USA" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "type") call BIS_fnc_getCfgData } ) then {
+	_type = (missionConfigFile >> "CfgORBAT" >> "USA" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "type") call BIS_fnc_getCfgData
 } else {
 	_company = "charlieCompany";
-	_type = (missionConfigFile >> "CfgORBAT" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "type") call BIS_fnc_getCfgData;
+	_type = (missionConfigFile >> "CfgORBAT" >> "USA" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "type") call BIS_fnc_getCfgData;
 };
 
-_id = (missionConfigFile >> "CfgORBAT" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "id") call BIS_fnc_getCfgData;
-_type = (missionConfigFile >> "CfgORBAT" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "type") call BIS_fnc_getCfgData;
-_size = (missionConfigFile >> "CfgORBAT" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "size") call BIS_fnc_getCfgData;
-_description = (missionConfigFile >> "CfgORBAT" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "description") call BIS_fnc_getCfgData;
+_id = (missionConfigFile >> "CfgORBAT" >> "USA" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "id") call BIS_fnc_getCfgData;
+_type = (missionConfigFile >> "CfgORBAT" >> "USA" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "type") call BIS_fnc_getCfgData;
+_size = (missionConfigFile >> "CfgORBAT" >> "USA" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "size") call BIS_fnc_getCfgData;
+_description = (missionConfigFile >> "CfgORBAT" >> "USA" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "description") call BIS_fnc_getCfgData;
 if (_type == "Recon") then { _icon = "b_recon"; } else { _icon = "b_hq"; };
 
-if ( !isNil { (missionConfigFile >> "CfgORBAT" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "assets") call BIS_fnc_getCfgData } ) then {
-	_assets = (missionConfigFile >> "CfgORBAT" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "assets") call BIS_fnc_getCfgData;
+if ( !isNil { (missionConfigFile >> "CfgORBAT" >> "USA" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "assets") call BIS_fnc_getCfgData } ) then {
+	_assets = (missionConfigFile >> "CfgORBAT" >> "USA" >> "b_5th_sfg" >> "1stBat" >> _company >> _group >> "assets") call BIS_fnc_getCfgData;
 } else {
 	_assets = [];
 };
@@ -28,11 +28,11 @@ _commander = name _unit;
 _commanderRank = rank _unit;
 
 // Doesnt work on map icon either
-// [(missionConfigFile >> "CfgORBAT" >> "b_5th_sfg" >> "1stBat" >> _company >> _group), "commander", _commander] call MIS_fnc_ORBATsetProp;
-// [(missionConfigFile >> "CfgORBAT" >> "b_5th_sfg" >> "1stBat" >> _company >> _group), "commanderRank", _commanderRank] call MIS_fnc_ORBATsetProp;
+// [(missionConfigFile >> "CfgORBAT" >> "USA" >> "b_5th_sfg" >> "1stBat" >> _company >> _group), "commander", _commander] call MIS_fnc_ORBATsetProp;
+// [(missionConfigFile >> "CfgORBAT" >> "USA" >> "b_5th_sfg" >> "1stBat" >> _company >> _group), "commanderRank", _commanderRank] call MIS_fnc_ORBATsetProp;
 
 [
-	(missionConfigFile >> "CfgORBAT" >> "b_5th_sfg" >> "1stBat" >> _company >> _group), 
+	(missionConfigFile >> "CfgORBAT" >> "USA" >> "b_5th_sfg" >> "1stBat" >> _company >> _group), 
 	_id, 
 	_size, 
 	_type, 
@@ -52,11 +52,11 @@ _commanderRank = rank _unit;
 // Also set parent company commander as HQ element IS the company command
 if (_group == "SHEPHERD") then {
 	// Doesnt work on map icon either
-	// [(missionConfigFile >> "CfgORBAT" >> "b_5th_sfg" >> "1stBat" >> "charlieCompany"), "commander", _commander] call MIS_fnc_ORBATsetProp;
-	// [(missionConfigFile >> "CfgORBAT" >> "b_5th_sfg" >> "1stBat" >> "charlieCompany"), "commanderRank", _commanderRank] call MIS_fnc_ORBATsetProp;
+	// [(missionConfigFile >> "CfgORBAT" >> "USA" >> "b_5th_sfg" >> "1stBat" >> "charlieCompany"), "commander", _commander] call MIS_fnc_ORBATsetProp;
+	// [(missionConfigFile >> "CfgORBAT" >> "USA" >> "b_5th_sfg" >> "1stBat" >> "charlieCompany"), "commanderRank", _commanderRank] call MIS_fnc_ORBATsetProp;
 
 	[
-		(missionConfigFile >> "CfgORBAT" >> "b_5th_sfg" >> "1stBat" >> "charlieCompany"), 
+		(missionConfigFile >> "CfgORBAT" >> "USA" >> "b_5th_sfg" >> "1stBat" >> "charlieCompany"), 
 		3, 
 		"Company", 
 		"Recon", 
