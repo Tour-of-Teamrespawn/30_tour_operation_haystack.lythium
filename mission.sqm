@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=2426;
+		nextID=2640;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=41;
+		nextID=53;
 	};
 	class Camera
 	{
-		pos[]={11686.501,213.55728,6562.4165};
-		dir[]={-0.73093235,-0.47685385,0.48822194};
-		up[]={-0.39653391,0.8789835,0.26486254};
-		aside[]={0.5554387,1.1597149e-007,0.83156413};
+		pos[]={15837.86,57.113922,5595.6377};
+		dir[]={0.70492655,-0.31060621,0.63765377};
+		up[]={0.23034786,0.95053864,0.20836522};
+		aside[]={0.67083406,0,-0.74160743};
 	};
 };
 binarizationWanted=0;
@@ -40,8 +40,8 @@ addons[]=
 	"rhsusf_c_m11xx",
 	"rhsusf_c_RG33",
 	"rhsusf_c_mrzr",
-	"rhsusf_c_troops",
 	"A3_Modules_F_StrategicMap",
+	"rhsusf_c_troops",
 	"A3_Ui_F",
 	"UK3CB_Factions_TKM_I",
 	"rhs_c_weapons",
@@ -145,17 +145,17 @@ class AddonsMetaData
 		};
 		class Item6
 		{
-			className="rhsusf_c_troops";
-			name="RHSUSF Infantry & Equipment";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item7
-		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item7
+		{
+			className="rhsusf_c_troops";
+			name="RHSUSF Infantry & Equipment";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
 		};
 		class Item8
 		{
@@ -494,8 +494,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="MELB_clan";
-									expression="_this animate ['hide_clan',_value,true]";
+									property="MELB_SN_Nose";
+									expression="_this animate ['hide_SN_nose',_value,true]";
 									class Value
 									{
 										class data
@@ -551,8 +551,8 @@ class Mission
 								};
 								class Attribute3
 								{
-									property="MELB_SN_Nose";
-									expression="_this animate ['hide_SN_nose',_value,true]";
+									property="MELB_clan";
+									expression="_this animate ['hide_clan',_value,true]";
 									class Value
 									{
 										class data
@@ -772,8 +772,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="MELB_SN_Nose";
-									expression="_this animate ['hide_SN_nose',_value,true]";
+									property="MELB_clan";
+									expression="_this animate ['hide_clan',_value,true]";
 									class Value
 									{
 										class data
@@ -848,8 +848,8 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="MELB_clan";
-									expression="_this animate ['hide_clan',_value,true]";
+									property="MELB_SN_Nose";
+									expression="_this animate ['hide_SN_nose',_value,true]";
 									class Value
 									{
 										class data
@@ -891,8 +891,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="MELB_clan";
-									expression="_this animate ['hide_clan',_value,true]";
+									property="MELB_SN_Nose";
+									expression="_this animate ['hide_SN_nose',_value,true]";
 									class Value
 									{
 										class data
@@ -967,8 +967,8 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="MELB_SN_Nose";
-									expression="_this animate ['hide_SN_nose',_value,true]";
+									property="MELB_clan";
+									expression="_this animate ['hide_clan',_value,true]";
 									class Value
 									{
 										class data
@@ -1011,8 +1011,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="MELB_SN_Nose";
-									expression="_this animate ['hide_SN_nose',_value,true]";
+									property="MELB_clan";
+									expression="_this animate ['hide_clan',_value,true]";
 									class Value
 									{
 										class data
@@ -1087,8 +1087,8 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="MELB_clan";
-									expression="_this animate ['hide_clan',_value,true]";
+									property="MELB_SN_Nose";
+									expression="_this animate ['hide_SN_nose',_value,true]";
 									class Value
 									{
 										class data
@@ -1395,7 +1395,7 @@ class Mission
 							};
 							id=2383;
 							type="rhsusf_M1238A1_socom_d";
-							atlOffset=0.00011634827;
+							atlOffset=-0.0030555725;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -1947,2171 +1947,9 @@ class Mission
 						};
 					};
 					id=140;
-					atlOffset=0.050361633;
+					atlOffset=0.050369263;
 				};
 				class Item1
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=2;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15829.876,28.395782,5614.7412};
-								angles[]={0.0032388929,4.14151,6.2804451};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								skill=1;
-								rank="SERGEANT";
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""SHEPHERD""]; }; ";
-								description="JTAC@SHEPHERD";
-								isPlayable=1;
-							};
-							id=1977;
-							type="rhsusf_socom_marsoc_jtac";
-							atlOffset=-1.9073486e-006;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male01ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.99000001;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15829.873,28.400448,5613.3096};
-								angles[]={0.0032388929,4.1251364,6.2804451};
-							};
-							side="West";
-							flags=6;
-							class Attributes
-							{
-								rank="CAPTAIN";
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""SHEPHERD""]; }; ";
-								description="Commander@SHEPHERD";
-								isPlayer=1;
-								isPlayable=1;
-							};
-							id=2024;
-							type="rhsusf_socom_marsoc_teamchief";
-							atlOffset=1.9073486e-006;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male10ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.99000001;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-					};
-					class Attributes
-					{
-					};
-					id=1975;
-					atlOffset=1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="groupID";
-							expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="SHEPHERD";
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item2
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=8;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15823.344,28.676033,5603.5508};
-								angles[]={0,0.9518761,0};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								skill=0.60000002;
-								rank="LIEUTENANT";
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""HUSKY""]; }; ";
-								description="Team Leader@HUSKY";
-								isPlayable=1;
-							};
-							id=1979;
-							type="rhsusf_socom_marsoc_teamleader";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male02ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.02;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15827.31,28.730536,5597.0732};
-								angles[]={0,0.95187277,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								skill=0.44999999;
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""HUSKY""]; }; ";
-								description="Medic@HUSKY";
-								isPlayable=1;
-							};
-							id=1980;
-							type="rhsusf_socom_marsoc_sarc";
-							atlOffset=1.1444092e-005;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male06ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.95999998;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item2
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15821.542,28.772802,5601.749};
-								angles[]={0,1.1007156,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								rank="SERGEANT";
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""HUSKY""]; }; ";
-								description="Element Leader@HUSKY";
-								isPlayable=1;
-							};
-							id=1981;
-							type="rhsusf_socom_marsoc_elementleader";
-							atlOffset=0.097396851;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male09ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item3
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15823.998,28.848799,5596.0996};
-								angles[]={0,0.9518761,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								skill=0.44999999;
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""HUSKY""]; }; ";
-								description="Mechanic@HUSKY";
-								isPlayable=1;
-							};
-							id=1982;
-							type="rhsusf_socom_marsoc_cso_mechanic";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ace_isEngineer";
-									expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=2;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.05;
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-						class Item4
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15826.727,28.725138,5597.9775};
-								angles[]={0.025652902,0.95186758,6.2550206};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								skill=0.44999999;
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""HUSKY""]; }; ";
-								description="Marksman@HUSKY";
-								isPlayable=1;
-							};
-							id=1983;
-							type="rhsusf_socom_marsoc_marksman";
-							atlOffset=0.0013923645;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male10ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.95999998;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item5
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15824.528,28.853527,5595.3242};
-								angles[]={0.025652902,0.95188665,6.2550206};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								skill=0.44999999;
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""HUSKY""]; }; ";
-								description="Grenadier@HUSKY";
-								isPlayable=1;
-							};
-							id=1984;
-							type="rhsusf_socom_marsoc_cso_grenadier";
-							atlOffset=0.1004734;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item6
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15823.86,28.685638,5602.7637};
-								angles[]={0.025655225,0.95185751,6.2550244};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								skill=0.44999999;
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""HUSKY""]; }; ";
-								description="Operator (Mk17)@HUSKY";
-								isPlayable=1;
-							};
-							id=1985;
-							type="rhsusf_socom_marsoc_cso_mk17";
-							atlOffset=0.0039806366;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.97000003;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item7
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15821.822,28.794065,5600.7441};
-								angles[]={0.025655225,1.1067109,6.2550225};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								rank="CORPORAL";
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""HUSKY""]; }; ";
-								description="Helicopter Pilot (MH-6M)@HUSKY";
-								isPlayable=1;
-							};
-							id=1986;
-							type="rhsusf_army_ucp_helipilot";
-							atlOffset=0.0031509399;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male06ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.03;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-					};
-					class Attributes
-					{
-					};
-					id=1978;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="groupID";
-							expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="HUSKY";
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item3
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=8;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15813.899,28.479326,5618.4746};
-								angles[]={0,0.98915809,0};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								skill=0.60000002;
-								rank="LIEUTENANT";
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""PITBULL""]; }; ";
-								description="Team Leader@PITBULL";
-								isPlayable=1;
-							};
-							id=1988;
-							type="rhsusf_socom_marsoc_teamleader";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male10ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.04;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15818.102,28.560394,5611.8193};
-								angles[]={0,0.98915476,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								skill=0.44999999;
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""PITBULL""]; }; ";
-								description="Medic@PITBULL";
-								isPlayable=1;
-							};
-							id=1989;
-							type="rhsusf_socom_marsoc_sarc";
-							atlOffset=5.7220459e-006;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male10ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.95999998;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item2
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15811.407,28.497702,5616.6221};
-								angles[]={0,0.91378969,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								rank="SERGEANT";
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""PITBULL""]; }; ";
-								description="Element Leader@PITBULL";
-								isPlayable=1;
-							};
-							id=1990;
-							type="rhsusf_socom_marsoc_elementleader";
-							atlOffset=5.7220459e-006;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male04ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.02;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item3
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15814.786,28.562212,5611.3291};
-								angles[]={0,0.91378969,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								skill=0.44999999;
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""PITBULL""]; }; ";
-								description="Mechanic@PITBULL";
-								isPlayable=1;
-							};
-							id=1991;
-							type="rhsusf_socom_marsoc_cso_mechanic";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ace_isEngineer";
-									expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=2;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.05;
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-						class Item4
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15814.646,28.496271,5617.0703};
-								angles[]={0.011456477,0.98914981,0.0011451211};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								skill=0.44999999;
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""PITBULL""]; }; ";
-								description="Marksman@PITBULL";
-								isPlayable=1;
-							};
-							id=1992;
-							type="rhsusf_socom_marsoc_marksman";
-							atlOffset=5.7220459e-006;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male10ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.95999998;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item5
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15815.429,28.575453,5610.2373};
-								angles[]={0.011451273,0.91376382,0.0011451211};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								skill=0.44999999;
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""PITBULL""]; }; ";
-								description="Grenadier@PITBULL";
-								isPlayable=1;
-							};
-							id=1993;
-							type="rhsusf_socom_marsoc_cso_grenadier";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item6
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15817.143,28.542265,5613.3057};
-								angles[]={0.011451273,0.98913264,0.0011451211};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								skill=0.44999999;
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""PITBULL""]; }; ";
-								description="Operator (Mk17)@PITBULL";
-								isPlayable=1;
-							};
-							id=1994;
-							type="rhsusf_socom_marsoc_cso_mk17";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.97000003;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item7
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15812.059,28.511181,5615.5107};
-								angles[]={0.011456477,0.91974157,0.0011451211};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								rank="CORPORAL";
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""PITBULL""]; }; ";
-								description="Helicopter Pilot (MH-6M)@PITBULL";
-								isPlayable=1;
-							};
-							id=1995;
-							type="rhsusf_army_ucp_helipilot";
-							atlOffset=5.7220459e-006;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male06ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.03;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-					};
-					class Attributes
-					{
-					};
-					id=1987;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="groupID";
-							expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="PITBULL";
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item4
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=8;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15808.792,28.514454,5614.8984};
-								angles[]={0,0.98915809,0};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								skill=0.60000002;
-								rank="LIEUTENANT";
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""COLLIE""]; }; ";
-								description="Team Leader@COLLIE";
-								isPlayable=1;
-							};
-							id=1997;
-							type="rhsusf_socom_marsoc_teamleader";
-							atlOffset=3.8146973e-006;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male04ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.05;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15812.801,28.628443,5608.1055};
-								angles[]={0,0.98915476,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								skill=0.44999999;
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""COLLIE""]; }; ";
-								description="Medic@COLLIE";
-								isPlayable=1;
-							};
-							id=1998;
-							type="rhsusf_socom_marsoc_sarc";
-							atlOffset=0.031574249;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male09ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item2
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15806.317,28.528624,5613.1992};
-								angles[]={0,0.98915809,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								rank="SERGEANT";
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""COLLIE""]; }; ";
-								description="Element Leader@COLLIE";
-								isPlayable=1;
-							};
-							id=1999;
-							type="rhsusf_socom_marsoc_elementleader";
-							atlOffset=0.10478973;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male09ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item3
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15809.71,28.6395,5607.8174};
-								angles[]={0,0.98915809,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								skill=0.44999999;
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""COLLIE""]; }; ";
-								description="Mechanic@COLLIE";
-								isPlayable=1;
-							};
-							id=2000;
-							type="rhsusf_socom_marsoc_cso_mechanic";
-							atlOffset=0.042877197;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ace_isEngineer";
-									expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=2;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.05;
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-						class Item4
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15810.306,28.6635,5606.3965};
-								angles[]={0.011451273,0.98922044,0.0011451211};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								skill=0.44999999;
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""COLLIE""]; }; ";
-								description="Grenadier@COLLIE";
-								isPlayable=1;
-							};
-							id=2001;
-							type="rhsusf_socom_marsoc_cso_grenadier";
-							atlOffset=0.049909592;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item5
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15809.58,28.530115,5613.6826};
-								angles[]={0.011456477,0.98922044,0.0011451211};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								skill=0.44999999;
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""COLLIE""]; }; ";
-								description="Operator (Mk17)@COLLIE";
-								isPlayable=1;
-							};
-							id=2002;
-							type="rhsusf_socom_marsoc_cso_mk17";
-							atlOffset=0.00083351135;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.97000003;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item6
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15806.926,28.540325,5612.1563};
-								angles[]={0.011456477,0.9952085,0.0011451211};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								rank="CORPORAL";
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""COLLIE""]; }; ";
-								description="Helicopter Pilot (MH-6M)@COLLIE";
-								isPlayable=1;
-							};
-							id=2003;
-							type="rhsusf_army_ucp_helipilot";
-							atlOffset=0.10412216;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male06ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.03;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item7
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15812.17,28.599958,5609.1582};
-								angles[]={0.011456477,0.98923755,0.0011451211};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								skill=0.44999999;
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""COLLIE""]; }; ";
-								description="Marksman@COLLIE";
-								isPlayable=1;
-							};
-							id=2004;
-							type="rhsusf_socom_marsoc_marksman";
-							atlOffset=0.015872955;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male10ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.95999998;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-					};
-					class Attributes
-					{
-					};
-					id=1996;
-					atlOffset=3.8146973e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="groupID";
-							expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="COLLIE";
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item5
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=2;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15822.002,28.973314,5593.4385};
-								angles[]={0.025652902,1.0083748,6.2550206};
-							};
-							side="West";
-							flags=6;
-							class Attributes
-							{
-								rank="SERGEANT";
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""BANG""]; }; ";
-								description="Helicopter Pilot (AH-6M)@BANG";
-								isPlayable=1;
-							};
-							id=2006;
-							type="rhsusf_army_ucp_helipilot";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male01ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.95999998;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15821.556,28.959692,5594.46};
-								angles[]={0.025655225,0.85950917,6.2550225};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								rank="CORPORAL";
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""BANG""]; }; ";
-								description="Helicopter Co-pilot (AH-6M)@BANG";
-								isPlayable=1;
-							};
-							id=2007;
-							type="rhsusf_army_ucp_helipilot";
-							atlOffset=0.10075188;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male09ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.02;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-					};
-					class Attributes
-					{
-					};
-					id=2005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="groupID";
-							expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="DAKKA";
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item6
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=2;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15818.266,28.906822,5600.1318};
-								angles[]={0.025655225,1.0500903,6.2550225};
-							};
-							side="West";
-							flags=6;
-							class Attributes
-							{
-								rank="SERGEANT";
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""DAKKA""]; }; ";
-								description="Helicopter Pilot (AH-6M)@DAKKA";
-								isPlayable=1;
-							};
-							id=2009;
-							type="rhsusf_army_ucp_helipilot";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male01ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.95999998;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15818.958,28.915247,5599.0439};
-								angles[]={0.025655225,1.1229124,6.2550225};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								rank="CORPORAL";
-								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""DAKKA""]; }; ";
-								description="Helicopter Co-pilot (AH-6M)@DAKKA";
-								isPlayable=1;
-							};
-							id=2010;
-							type="rhsusf_army_ucp_helipilot";
-							atlOffset=1.5258789e-005;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male09ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.02;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-					};
-					class Attributes
-					{
-					};
-					id=2008;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="groupID";
-							expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="BANG";
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item7
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -4203,7 +2041,7 @@ class Mission
 						nAttributes=4;
 					};
 				};
-				class Item8
+				class Item2
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -4295,9 +2133,2171 @@ class Mission
 						nAttributes=4;
 					};
 				};
+				class Item3
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=2;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15829.873,28.400448,5613.3096};
+								angles[]={0.0032388929,4.1251364,6.2804451};
+							};
+							side="West";
+							flags=6;
+							class Attributes
+							{
+								rank="CAPTAIN";
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""SHEPHERD""]; }; ";
+								description="Commander@SHEPHERD";
+								isPlayer=1;
+								isPlayable=1;
+							};
+							id=2487;
+							type="rhsusf_socom_marsoc_teamchief";
+							atlOffset=1.9073486e-006;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male10ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.99000001;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15829.876,28.395782,5614.7412};
+								angles[]={0.0032388929,4.14151,6.2804451};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								skill=1;
+								rank="SERGEANT";
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""SHEPHERD""]; }; ";
+								description="JTAC@SHEPHERD";
+								isPlayable=1;
+							};
+							id=2488;
+							type="rhsusf_socom_marsoc_jtac";
+							atlOffset=-1.9073486e-006;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male01ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.99000001;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2486;
+					atlOffset=1.9073486e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="groupID";
+							expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="SHEPHERD";
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item4
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=8;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15823.344,28.676033,5603.5508};
+								angles[]={0,0.9518761,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								skill=0.60000002;
+								rank="LIEUTENANT";
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""HUSKY""]; }; ";
+								description="Team Leader@HUSKY";
+								isPlayable=1;
+							};
+							id=2490;
+							type="rhsusf_socom_marsoc_teamleader";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male02ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1.02;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15821.542,28.870422,5601.749};
+								angles[]={0,1.1007156,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								rank="SERGEANT";
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""HUSKY""]; }; ";
+								description="Element Leader@HUSKY";
+								isPlayable=1;
+							};
+							id=2491;
+							type="rhsusf_socom_marsoc_elementleader";
+							atlOffset=0.097396851;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male09ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.98000002;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15827.31,28.730536,5597.0732};
+								angles[]={0,0.95187277,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								skill=0.44999999;
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""HUSKY""]; }; ";
+								description="Medic@HUSKY";
+								isPlayable=1;
+							};
+							id=2492;
+							type="rhsusf_socom_marsoc_sarc";
+							atlOffset=1.1444092e-005;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.95999998;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15823.998,28.848799,5596.0996};
+								angles[]={0,0.9518761,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								skill=0.44999999;
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""HUSKY""]; }; ";
+								description="Mechanic@HUSKY";
+								isPlayable=1;
+							};
+							id=2493;
+							type="rhsusf_socom_marsoc_cso_mechanic";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ace_isEngineer";
+									expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=2;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1.05;
+										};
+									};
+								};
+								nAttributes=3;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15826.727,28.725138,5597.9775};
+								angles[]={0.025652902,0.95186758,6.2550206};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								skill=0.44999999;
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""HUSKY""]; }; ";
+								description="Marksman@HUSKY";
+								isPlayable=1;
+							};
+							id=2494;
+							type="rhsusf_socom_marsoc_marksman";
+							atlOffset=0.0013923645;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male10ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.95999998;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15824.528,28.954229,5595.3242};
+								angles[]={0.025652902,0.95188665,6.2550206};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								skill=0.44999999;
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""HUSKY""]; }; ";
+								description="Grenadier@HUSKY";
+								isPlayable=1;
+							};
+							id=2495;
+							type="rhsusf_socom_marsoc_cso_grenadier";
+							atlOffset=0.1004734;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.98000002;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15823.86,28.685638,5602.7637};
+								angles[]={0.025655225,0.95185751,6.2550244};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								skill=0.44999999;
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""HUSKY""]; }; ";
+								description="Operator (Mk17)@HUSKY";
+								isPlayable=1;
+							};
+							id=2496;
+							type="rhsusf_socom_marsoc_cso_mk17";
+							atlOffset=0.0039806366;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.97000003;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15821.822,28.794065,5600.7441};
+								angles[]={0.025655225,1.1067109,6.2550225};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								rank="CORPORAL";
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""HUSKY""]; }; ";
+								description="Helicopter Pilot (MH-6M)@HUSKY";
+								isPlayable=1;
+							};
+							id=2497;
+							type="rhsusf_army_ucp_helipilot";
+							atlOffset=0.0031509399;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1.03;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2489;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="groupID";
+							expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="HUSKY";
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item5
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=8;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15813.899,28.479326,5618.4746};
+								angles[]={0,0.98915809,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								skill=0.60000002;
+								rank="LIEUTENANT";
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""PITBULL""]; }; ";
+								description="Team Leader@PITBULL";
+								isPlayable=1;
+							};
+							id=2499;
+							type="rhsusf_socom_marsoc_teamleader";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male10ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1.04;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15811.407,28.497702,5616.6221};
+								angles[]={0,0.91378969,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								rank="SERGEANT";
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""PITBULL""]; }; ";
+								description="Element Leader@PITBULL";
+								isPlayable=1;
+							};
+							id=2500;
+							type="rhsusf_socom_marsoc_elementleader";
+							atlOffset=5.7220459e-006;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male04ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1.02;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15818.102,28.560394,5611.8193};
+								angles[]={0,0.98915476,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								skill=0.44999999;
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""PITBULL""]; }; ";
+								description="Medic@PITBULL";
+								isPlayable=1;
+							};
+							id=2501;
+							type="rhsusf_socom_marsoc_sarc";
+							atlOffset=5.7220459e-006;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male10ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.95999998;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15814.786,28.562212,5611.3291};
+								angles[]={0,0.91378969,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								skill=0.44999999;
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""PITBULL""]; }; ";
+								description="Mechanic@PITBULL";
+								isPlayable=1;
+							};
+							id=2502;
+							type="rhsusf_socom_marsoc_cso_mechanic";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ace_isEngineer";
+									expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=2;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1.05;
+										};
+									};
+								};
+								nAttributes=3;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15814.646,28.496271,5617.0703};
+								angles[]={0.011456477,0.98914981,0.0011451211};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								skill=0.44999999;
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""PITBULL""]; }; ";
+								description="Marksman@PITBULL";
+								isPlayable=1;
+							};
+							id=2503;
+							type="rhsusf_socom_marsoc_marksman";
+							atlOffset=5.7220459e-006;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male10ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.95999998;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15815.429,28.575453,5610.2373};
+								angles[]={0.011451273,0.91376382,0.0011451211};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								skill=0.44999999;
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""PITBULL""]; }; ";
+								description="Grenadier@PITBULL";
+								isPlayable=1;
+							};
+							id=2504;
+							type="rhsusf_socom_marsoc_cso_grenadier";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.98000002;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15817.143,28.542265,5613.3057};
+								angles[]={0.011451273,0.98913264,0.0011451211};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								skill=0.44999999;
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""PITBULL""]; }; ";
+								description="Operator (Mk17)@PITBULL";
+								isPlayable=1;
+							};
+							id=2505;
+							type="rhsusf_socom_marsoc_cso_mk17";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.97000003;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15812.059,28.511181,5615.5107};
+								angles[]={0.011456477,0.91974157,0.0011451211};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								rank="CORPORAL";
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""PITBULL""]; }; ";
+								description="Helicopter Pilot (MH-6M)@PITBULL";
+								isPlayable=1;
+							};
+							id=2506;
+							type="rhsusf_army_ucp_helipilot";
+							atlOffset=5.7220459e-006;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1.03;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2498;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="groupID";
+							expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="PITBULL";
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item6
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=8;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15808.792,28.514454,5614.8984};
+								angles[]={0,0.98915809,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								skill=0.60000002;
+								rank="LIEUTENANT";
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""COLLIE""]; }; ";
+								description="Team Leader@COLLIE";
+								isPlayable=1;
+							};
+							id=2508;
+							type="rhsusf_socom_marsoc_teamleader";
+							atlOffset=3.8146973e-006;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male04ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1.05;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15806.317,28.635872,5613.1992};
+								angles[]={0,0.98915809,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								rank="SERGEANT";
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""COLLIE""]; }; ";
+								description="Element Leader@COLLIE";
+								isPlayable=1;
+							};
+							id=2509;
+							type="rhsusf_socom_marsoc_elementleader";
+							atlOffset=0.10478973;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male09ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15812.801,28.628443,5608.1055};
+								angles[]={0,0.98915476,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								skill=0.44999999;
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""COLLIE""]; }; ";
+								description="Medic@COLLIE";
+								isPlayable=1;
+							};
+							id=2510;
+							type="rhsusf_socom_marsoc_sarc";
+							atlOffset=0.031574249;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male09ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15809.71,28.6395,5607.8174};
+								angles[]={0,0.98915809,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								skill=0.44999999;
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""COLLIE""]; }; ";
+								description="Mechanic@COLLIE";
+								isPlayable=1;
+							};
+							id=2511;
+							type="rhsusf_socom_marsoc_cso_mechanic";
+							atlOffset=0.042877197;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ace_isEngineer";
+									expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=2;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1.05;
+										};
+									};
+								};
+								nAttributes=3;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15810.306,28.6635,5606.3965};
+								angles[]={0.011451273,0.98922044,0.0011451211};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								skill=0.44999999;
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""COLLIE""]; }; ";
+								description="Grenadier@COLLIE";
+								isPlayable=1;
+							};
+							id=2512;
+							type="rhsusf_socom_marsoc_cso_grenadier";
+							atlOffset=0.049909592;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.98000002;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15809.58,28.530115,5613.6826};
+								angles[]={0.011456477,0.98922044,0.0011451211};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								skill=0.44999999;
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""COLLIE""]; }; ";
+								description="Operator (Mk17)@COLLIE";
+								isPlayable=1;
+							};
+							id=2513;
+							type="rhsusf_socom_marsoc_cso_mk17";
+							atlOffset=0.00083351135;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.97000003;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15806.926,28.647852,5612.1563};
+								angles[]={0.011456477,0.9952085,0.0011451211};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								rank="CORPORAL";
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""COLLIE""]; }; ";
+								description="Helicopter Pilot (MH-6M)@COLLIE";
+								isPlayable=1;
+							};
+							id=2514;
+							type="rhsusf_army_ucp_helipilot";
+							atlOffset=0.10412216;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1.03;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15812.17,28.599958,5609.1582};
+								angles[]={0.011456477,0.98923755,0.0011451211};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								skill=0.44999999;
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""COLLIE""]; }; ";
+								description="Marksman@COLLIE";
+								isPlayable=1;
+							};
+							id=2515;
+							type="rhsusf_socom_marsoc_marksman";
+							atlOffset=0.015872955;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male10ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.95999998;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2507;
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="groupID";
+							expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="COLLIE";
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item7
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=2;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15822.002,28.973314,5593.4385};
+								angles[]={0.025652902,1.0083748,6.2550206};
+							};
+							side="West";
+							flags=6;
+							class Attributes
+							{
+								rank="SERGEANT";
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""BANG""]; }; ";
+								description="Helicopter Pilot (AH-6M)@BANG";
+								isPlayable=1;
+							};
+							id=2517;
+							type="rhsusf_army_ucp_helipilot";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male01ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.95999998;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15821.556,29.060446,5594.46};
+								angles[]={0.025655225,0.85950917,6.2550225};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								rank="CORPORAL";
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""BANG""]; }; ";
+								description="Helicopter Co-pilot (AH-6M)@BANG";
+								isPlayable=1;
+							};
+							id=2518;
+							type="rhsusf_army_ucp_helipilot";
+							atlOffset=0.10075188;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male09ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1.02;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2516;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="groupID";
+							expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="DAKKA";
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item8
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=2;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15818.266,28.906822,5600.1318};
+								angles[]={0.025655225,1.0500903,6.2550225};
+							};
+							side="West";
+							flags=6;
+							class Attributes
+							{
+								rank="SERGEANT";
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""DAKKA""]; }; ";
+								description="Helicopter Pilot (AH-6M)@DAKKA";
+								isPlayable=1;
+							};
+							id=2520;
+							type="rhsusf_army_ucp_helipilot";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male01ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.95999998;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15818.958,28.915247,5599.0439};
+								angles[]={0.025655225,1.1229124,6.2550225};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								rank="CORPORAL";
+								init="if (isServer) then { this setVariable [""A455_group"", ""SHEPHERD"", true]; group this setgroupIdGlobal [""DAKKA""]; }; ";
+								description="Helicopter Co-pilot (AH-6M)@DAKKA";
+								isPlayable=1;
+							};
+							id=2521;
+							type="rhsusf_army_ucp_helipilot";
+							atlOffset=1.5258789e-005;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male09ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1.02;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2519;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="groupID";
+							expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="BANG";
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
 			};
 			id=139;
-			atlOffset=0.033115387;
+			atlOffset=0.12187195;
 		};
 		class Item1
 		{
@@ -4310,9 +4310,9 @@ class Mission
 		class Item2
 		{
 			dataType="Marker";
-			position[]={12696.332,136.08545,9379.5996};
+			position[]={12696.332,136.08501,9379.5996};
 			name="mkr_ao";
-			markerType="ELLIPSE";
+			markerType="RECTANGLE";
 			type="";
 			colorName="ColorEAST";
 			alpha=0.60000002;
@@ -4320,7 +4320,7 @@ class Mission
 			a=1000;
 			b=1000;
 			id=2012;
-			atlOffset=52.04113;
+			atlOffset=52.040688;
 		};
 		class Item3
 		{
@@ -4349,7 +4349,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={9662.8379,28.000444,4674.0337};
+								position[]={7911.1475,138.84709,5833.4272};
 							};
 							side="Independent";
 							flags=7;
@@ -4358,6 +4358,7 @@ class Mission
 								skill=1;
 								rank="MAJOR";
 								name="insurgentLeader";
+								init="this setIdentity ""FahimalArshad"";";
 								class Inventory
 								{
 									class primaryWeapon
@@ -4834,7 +4835,7 @@ class Mission
 				};
 			};
 			id=2051;
-			atlOffset=-28.589443;
+			atlOffset=-29.713936;
 		};
 		class Item5
 		{
@@ -5404,7 +5405,7 @@ class Mission
 					};
 					id=2212;
 					type="Land_Bandage_F";
-					atlOffset=0.0012226105;
+					atlOffset=0.023126602;
 				};
 				class Item24
 				{
@@ -8021,8 +8022,8 @@ class Mission
 			name="mkr_blacklist_0";
 			markerType="ELLIPSE";
 			type="";
-			a=2000;
-			b=2000;
+			a=1500;
+			b=1500;
 			id=2416;
 			atlOffset=13.550785;
 		};

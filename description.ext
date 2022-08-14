@@ -2,14 +2,16 @@
 // e.g. mission name / author / headers etc
 #include "hpp\TOUR_Mission_Specific.hpp"
 
-// Standard TOUR settings
+// Standard TOUR settings, shouldn't need to change much
 #include "hpp\TOUR_Standard_Config.hpp"
 #include "scripts\TOUR_RC\dialog\hpp\admintool.hpp"
 
 // Extra stuff
-#include "hpp\CfgWorlds.hpp"
-#include "hpp\CfgFunctions.hpp"
+
 #include "hpp\CfgDebriefing.hpp"
-#include "hpp\Params.hpp"
-#include "hpp\CfgSounds.hpp"
+#include "hpp\CfgFunctions.hpp"
+#include "hpp\CfgIdentities.hpp"
 #include "hpp\CfgORBAT.hpp"
+#include "hpp\CfgSounds.hpp"
+#include "hpp\CfgWorlds.hpp"
+#include "hpp\Params.hpp"

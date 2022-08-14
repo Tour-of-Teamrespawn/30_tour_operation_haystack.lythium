@@ -1,5 +1,7 @@
+params ["_player", "_didJIP"];
+
 waitUntil {!isNil "TOUR_init_complete"};
-waitUntil {player == player};
+waitUntil {_player == player};
 
 #include "hpp\initBriefing.hpp"
 
@@ -21,7 +23,7 @@ private _group = (player getVariable "A455_GROUP");
 if (A455_DEBUG_MODE) then {
 	// enemy trackers
 	while {alive player} do {
-		[allUnits] call A455_fnc_updateTrackingMarkers;
+		[units independent] call A455_fnc_updateTrackingMarkers;
 		sleep 5;
 	};
 };

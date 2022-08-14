@@ -2,18 +2,23 @@ class CfgFunctions
 {
 	class A455
 	{
+		class AI
+		{
+			class doSurrender {};
+		};
 		class Debug
 		{
 			class updateTrackingMarkers {};
 		};
 		class Control
 		{
-			// class endAction {};
+			class addSearchForIntel {};
 			class insurgentLeaderAlerted {};
-			class insurgentLeaderKilled {};
+			class insurgentLeaderDetained {};
 			class insurgentLeaderFound {};
+			class insurgentLeaderKilled {};
+			class searchedForIntel {};
 			class setupInsurgentLeader {};
-			class searchForIntel {};
 		};
 		class General
 		{

@@ -14,7 +14,7 @@ sleep 2;
 enableRadio true;
 _rankingPlayerGroupName = _caller getVariable "A455_group";
 
-_caller sideChat "Sir, I am sorry to report that we had to pull out without Ayman al-Arshad in custody.";
+_caller sideChat "Sir, I am sorry to report that we had to pull out without Fahim al-Arshad in custody.";
 sleep 5;
 HQ sideChat "That is NOT what I wanted to hear from you! Well, at least some of you made it back. Get yourselves cleaned up and report in for debriefing.";
 sleep 5;

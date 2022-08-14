@@ -196,56 +196,42 @@ class CfgORBAT
 			
 		};
 	};
+	
+	class cia
+	{
+		// id = 1;
+		// idType = 0;
+		type = "Unknown";
+		side = "Civilian";
+		// size = "Division";
+		// commander = "William Joseph Burns";
+		// commanderRank = "Colonel";
+		text = "Central Intelligence Agency";
+		textShort = "CIA";
+		description = "The CIA is officially tasked with gathering, processing, and analyzing national security information from around the world, primarily through the use of human intelligence and performing covert actions.";
 
-	// class O_3co
-	// {
-	// 	id = 3;
-	// 	idType = 0;
-	// 	type = "Infantry";
-	// 	side = "East";
-	// 	size = "Company";
-	// 	commander = "Dmitry Federov";
-	// 	commanderRank = "Captain";
-	// 	text = "%1 %2 %3";
-	// 	textShort = "textShort - %1 %3";
-	// 	description = "Testing 123";
+		// assets[] = {{B_Heli_Transport_03_F,5},{B_Heli_Light_01_F,3},{B_Heli_Light_01_armed_F,4},B_Heli_Transport_01_camo_F}; // Will display pictures of all available asseto the unit commander:
+		// Can be an array with format {classname, [int active icons], [int greyed out icons]}, or simply a classname
+		subordinates[] = {};	   // Subordinates, searched on the same level as this class.
+		tags[] = {CIA, US, BLUFOR}; // Group tags. When opening ORBAT viewer, user can define what tags will be accepted.
+		insignia = __EVAL(getMissionPath "img\cia_insignia.paa"); // Unit insignia, displayed in ORBAT background and in tooltip
+		// colorInsignia[] = {0,0,1,1}; // Insignia image color (white default), can be either RGBA array, or class from CfgMarkerColors
+		// texture = "\ca\missions_f\data\orbat\customTexture_ca.paa"; // Custom texture, will replace icon set by 'type' param.
+		// color[] = {0,0,1,1}; // Custom color, will replace color set by 'side' param. Can be either RGBA array, or class from CfgMarkerColors (e.g. color = "ColorWEST";)
 
-	// 	// assets[] = {{B_Heli_Transport_03_F,5},{B_Heli_Light_01_F,3},{B_Heli_Light_01_armed_F,4},B_Heli_Transport_01_camo_F}; // Will display pictures of all available asseto the unit commander:
-	//  	// Can be an array with format {classname, [int active icons], [int greyed out icons]}, or simply a classname
-	// 	subordinates[] = {}; // Subordinates, searched on the same level as this class.
-	// 	tags[] = {Tour,KDF,Russian,OPFOR}; // Group tags. When opening ORBAT viewer, user can define what tags will be accepted.
-
-	// 	//insignia = "\ca\missions_f\data\orbat\7thInfantry_ca.paa"; // Unit insignia, displayed in ORBAT background and in tooltip
-	// 	//colorInsignia[] = {0,0,1,1}; // Insignia image color (white default), can be either RGBA array, or class from CfgMarkerColors
-	// 	//texture = "\ca\missions_f\data\orbat\customTexture_ca.paa"; // Custom texture, will replaced icon set by 'type' param.
-	// 	//color[] = {0,0,1,1}; // Custom color, will replace color set by 'side' param. Can be either RGBA array, or class from CfgMarkerColors (e.g. color = "ColorWEST";)
-
-	// 	// class 1stPlatoon
-	// 	// {
-	// 	// 	id = 0;
-	// 	// 	idType = 0;
-	// 	// 	type = "Infantry";
-	// 	// 	side = "East";
-	// 	// 	size = "Platoon";
-	// 	// 	commander = "Unknown";
-	// 	// 	commanderRank = "Unknown";
-	// 	// 	text = "Ghost Platoon is Ran by Major Colton";
-	// 	// 	textShort = "%1 %3";
-	// 	// 	description = "Ghost Platoon";
-	// 	// };
-
-	// 	// class 2ndPlatoon
-	// 	// {
-	// 	// 	id = 1;
-	// 	// 	idType = 0;
-	// 	// 	type = "Infantry";
-	// 	// 	side = "East";
-	// 	// 	size = "Platoon";
-	// 	// 	commander = "Dixon";
-	// 	// 	commanderRank = "Lieutenant";
-	// 	// 	text = "Raider Platoon is ran by Lieutenant Dixon";
-	// 	// 	textShort = "%1 %3";
-	// 	// 	description = "Raider Platoon";
-	// 	// };
-	// };
+		class SENIOR
+		{
+			// id = 1;
+			// idType = 0;
+			type = "Unknown";
+			side = "Civilian";
+			// size = "Size1";
+			commander = "SENIOR";
+			// commanderRank = "Major";
+			text = "CIA Operative - SENIOR";
+			textShort = "CIA - SENIOR";
+			description = "SENIOR is the codename for our CIA contact in the region, and will be running the interrogation of Fahim al-Arshad.";
+		};
+	};
+	
 };

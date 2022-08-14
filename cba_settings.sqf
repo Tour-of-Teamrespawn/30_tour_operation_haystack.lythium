@@ -1,5 +1,5 @@
 // LAMBS Danger
-force lambs_danger_cqbRange = 60;
+force lambs_danger_cqbRange = 100;
 force lambs_danger_disableAIAutonomousManoeuvres = false;
 force lambs_danger_disableAIDeployStaticWeapons = false;
 force lambs_danger_disableAIFindStaticWeapons = false;
@@ -8,7 +8,7 @@ force lambs_danger_disableAIPlayerGroup = false;
 force lambs_danger_disableAIPlayerGroupReaction = false;
 force lambs_danger_disableAutonomousFlares = false;
 force lambs_danger_disableAutonomousSmokeGrenades = false;
-force lambs_danger_panicChance = 0.1;
+force lambs_danger_panicChance = 0.25;
 
 // LAMBS Danger Eventhandlers
 force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
@@ -30,7 +30,7 @@ force lambs_main_disableAIFleeing = false;
 force lambs_main_disableAIGestures = false;
 force lambs_main_disableAutonomousMunitionSwitching = false;
 force lambs_main_indoorMove = 0.1;
-force lambs_main_maxRevealValue = 0.8;
+force lambs_main_maxRevealValue = 1;
 force lambs_main_minObstacleProximity = 5;
 force lambs_main_disablePlayerGroupSuppression = false;
 force lambs_main_minFriendlySuppressionDistance = 20;

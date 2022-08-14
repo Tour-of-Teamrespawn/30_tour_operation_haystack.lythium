@@ -46,12 +46,12 @@ Resupply:<br/>
 player createDiaryRecord ["Diary", ["Execution", "
 You are to brief your teams and head out from <marker name='mkr_fob'>FOB Fabiano</marker> by helicopter as soon as possible.<br/><br/>
 All aerial assets will begin the search of the AO, specific as determined by special operations command team SHEPHERD.<br/><br/>
-Ayman al-Arshad is to be secured and transported back to FOB Fabiano via helicopter.<br/>If Ayman is killed while attempting capture, search his person and any vehicles for intelligence that may be of use.<br/><br/>
+Fahim al-Arshad is to be secured and transported back to FOB Fabiano via helicopter.<br/>If Fahim is killed while attempting capture, search his person and any vehicles for intelligence that may be of use.<br/><br/>
 "]];
 
 player createDiaryRecord ["Diary", ["Mission", "
 You will be flying out of the <marker name='mkr_fob'>FOB Fabiano</marker>.
-Your mission is to find and capture the leader of the Al-Shabab, Ayman al-Arshad. He is to be brought in alive for questioning, so don't get too trigger happy!<br/><br/>
+Your mission is to find and capture the leader of the Al-Shabab, Fahim al-Arshad. He is to be brought in alive for questioning, so don't get too trigger happy!<br/><br/>
 You must ensure no civilians are harmed during this operation, we need to show the locals that we are here to help.<br/><br/>
 The mission can be aborted at your disgression by reporting into the <marker name='mkr_co'>CO</marker> back at the FOB.<br/><br/>
 "]];
@@ -61,9 +61,9 @@ _vehicleType = "car";
 
 player createDiaryRecord ["Diary", ["Situation", format ["
 The insurgent group known as Al-Shabab have had increasing activity in the area recently, killing and kidnapping anyone thought to be helping us as well as planting IEDs and generally being a pain in our collective asses.<br/><br/>
-A source from our friends in the CIA claims to have solid confirmation that Ayman al-Arshad, the current leader of Al-Shabab and a real nasty piece of work, is in the area north of Kinduf right now.<br/><br/>
+A source from our friends in the CIA claims to have solid confirmation that Fahim al-Arshad, the current leader of Al-Shabab and a real nasty piece of work, is in the area north of Kinduf right now.<br/><br/>
 Our source has said that heavily armed fighters from multiple cells have been travelling in from across the region for an important meeting.<br/>We expect a heavy insurgent prescence in the area with probable technical support and the potential for IEDs.<br/><br/>
-Exact details on Ayman's location are light to say the leastm, all we have is that he was said to be in a %1 %2 heading to a local hideout.<br/><br/>
+Exact details on Fahim's location are light to say the leastm, all we have is that he was said to be in a %1 %2 heading to a local hideout.<br/><br/>
 We need to move right now to have a hope of bringing this guy in safely, before he can go to ground or link up with and lead the other Al-Shabab cells into more mayhem.<br/><br/>", _vehicleColour, _vehicleType]]];   
 
 player createDiarySubject ["Appendix", "Appendix"];
@@ -72,7 +72,7 @@ Flag / pictures TBC<br/><br/>
 
 Lore TBC<br/><br/>
 "]];
-player createDiaryRecord ["Appendix", ["Appendix A - Ayman al-Arshad","
+player createDiaryRecord ["Appendix", ["Appendix A - Fahim al-Arshad","
 Picture TBC<br/><br/>
 
 Lore TBC<br/><br/>

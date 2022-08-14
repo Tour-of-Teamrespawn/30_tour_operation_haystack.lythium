@@ -1,6 +1,6 @@
 // TODO: ADD "IS HANDCUFFED" CHECK TO CAPTURED TRIGGER
 
-private _captureTask = [west, "A455_task_capture", ["Capture Ayman al-Arshad, leader of the local Al-Shabab cell, and bring him in for questioning.", "Capture Ayman al-Arshad", "mkr_ao"], objNull, "ASSIGNED", 1, false, "search", false] call BIS_fnc_taskCreate;
+private _captureTask = [west, "A455_task_capture", ["Capture Fahim al-Arshad, leader of the local Al-Shabab cell, and bring him in for questioning.", "Capture Fahim al-Arshad", "mkr_ao"], objNull, "ASSIGNED", 1, false, "search", false] call BIS_fnc_taskCreate;
 
 private _NoDeadCivsTask = [west, "A455_task_nocollateral", ["Ensure that no civilians are harmed during the operation.", "No collateral damage", "mkr_ao"], objNull, "CREATED", 3, false, "meet", false] call BIS_fnc_taskCreate;
 
