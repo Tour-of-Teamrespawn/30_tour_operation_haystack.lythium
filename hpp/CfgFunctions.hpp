@@ -5,6 +5,7 @@ class CfgFunctions
 		class AI
 		{
 			class doSurrender {};
+			class spawnCivilians {};
 		};
 		class Debug
 		{
@@ -19,6 +20,7 @@ class CfgFunctions
 			class insurgentLeaderKilled {};
 			class searchedForIntel {};
 			class setupInsurgentLeader {};
+			class spawnParkedCars {};
 		};
 		class General
 		{

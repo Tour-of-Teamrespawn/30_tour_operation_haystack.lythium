@@ -4,6 +4,11 @@ enableItemsDropping = 0;
 disabledAI = 1;
 allowProfileGlasses = 1;
 
+
+// corpseManagerMode = 3;
+// corpseLimit = 30;
+// corpseRemovalMinTime
+
 // Respawn Settings
 respawn = 3;
 respawnDelay = 30;

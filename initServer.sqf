@@ -7,10 +7,19 @@ publicVariable "A455_AO_CENTRE";
 "mkr_ao" setMarkerPos A455_AO_CENTRE;
 "mkr_ao" setMarkerSize [A455_AO_SIZE, A455_AO_SIZE];
 
+createMarker ["mkr_ao_big", A455_AO_CENTRE];
+if (A455_DEBUG_MODE) then {
+	"mkr_ao_big" setMarkerAlpha 0.5;
+} else {
+	"mkr_ao_big" setMarkerAlpha 0;
+};
+"mkr_ao_big" setMarkerShape "RECTANGLE";
+"mkr_ao_big" setMarkerColor "ColorWhite";
+"mkr_ao_big" setMarkerSize [(A455_AO_SIZE * 1.25), (A455_AO_SIZE * 1.25)];
+
 call A455_fnc_setupTasks;
 call A455_fnc_setupInsurgentLeader;
-
-
+_0 = [] spawn A455_fnc_spawnParkedCars;
 
 // setup trigger to fire if no player has left base after 10min
 // RemoteExec on all players but not dedicated server

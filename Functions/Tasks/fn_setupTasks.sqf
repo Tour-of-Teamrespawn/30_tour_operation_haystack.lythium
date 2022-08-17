@@ -10,8 +10,3 @@ _capturedTrigger settriggerArea [250, 250, 0, false];
 _capturedTrigger settriggerStatements ["(alive insurgentLeader) && (insurgentLeader in thisList) && (insurgentLeader getVariable [""ace_captives_isHandcuffed"",false]) && (vehicle insurgentLeader == insurgentLeader)", "call A455_fnc_seizedPlant", ""];
 _capturedTrigger settriggerTimeout [5, 10, 15, false];
 _capturedTrigger setTriggerInterval 5;
-
-// private _NCTask1Trigger = createTrigger ["EmptyDetector", [11553.5, 6989.65, 0.00131226]];
-// _NCTask1Trigger settriggerArea [7, 7, 0, false];
-// _NCTask1Trigger settriggerStatements ["count (nearestTerrainObjects [getPosATL thistrigger, [""HOUSE""], 7]) < 3", "call A455_fnc_failnCTask", ""];
-// _NCTask1Trigger settriggerInterval 5;

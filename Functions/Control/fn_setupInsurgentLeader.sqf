@@ -6,11 +6,11 @@
 A455_eh_leaderKilled = insurgentLeader addEventHandler ["Killed", {
 	params ["_unit", "_killer"];
 	if (A455_DEBUG_MODE) then { hint format ["%1 has been killed by %2.", _unit, _killer]; };
-	_this call A455_fnc_insurgentLeaderKilled;
+	_this spawn A455_fnc_insurgentLeaderKilled;
 }];
 
-// add capturedEH
-["ace_captiveStatusChanged", { _this spawn A455_fnc_insurgentLeaderDetained; }] call CBA_fnc_addEventHandler;
+// add captured EH
+["ace_captiveStatusChanged", { [_this] remoteExec ["A455_fnc_insurgentLeaderDetained", 0, false]; }] call CBA_fnc_addEventHandler;
 
 // ------------------------------------------------------------------------------------------------
 // TRIGGERS
@@ -25,19 +25,25 @@ _playerDetectedTrigger setTriggerInterval 5;
 // setup trigger to fire if ANY player knows about insurgentLeader
 private _insurgentLeaderDetectedTrigger = createTrigger ["EmptyDetector", [0,0,0]];
 _insurgentLeaderDetectedTrigger setTriggerArea [0, 0, 0, false];
-_insurgentLeaderDetectedTrigger setTriggerStatements ["WEST knowsAbout insurgentLeader > 0.5", "_nil = [(WEST knowsAbout insurgentLeader)] spawn A455_fnc_insurgentLeaderFound", ""];
+_insurgentLeaderDetectedTrigger setTriggerStatements ["WEST knowsAbout insurgentLeader > 2", "_nil = [(WEST knowsAbout insurgentLeader)] spawn A455_fnc_insurgentLeaderFound", ""];
 _insurgentLeaderDetectedTrigger setTriggerInterval 5;
 
 // setup trigger to force surrender when
-// players get within 30m
-// WEST outnumbers GUER in 30m
+// WEST get within 20m
+// WEST outnumbers GUER in 20m
 // he is out of vehicle
-private _doSurrenderTrigger = createTrigger ["EmptyDetector", [0,0,0]];
-_doSurrenderTrigger setTriggerArea [30, 30, 0, false];
-_doSurrenderTrigger setTriggerActivation ["ANY", "PRESENT", true];
-_doSurrenderTrigger setTriggerStatements ["(({ side _x == WEST } count thisList) >= ({ side _x == independent } count thisList)) && (vehicle insurgentLeader == insurgentLeader)", "[insurgentLeader, true] spawn A455_fnc_doSurrender", ""];
-_doSurrenderTrigger setTriggerInterval 1;
-_doSurrenderTrigger attachTo [insurgentLeader, [0,0,0]];
+doSurrenderTrigger = createTrigger ["EmptyDetector", [0,0,0]];
+doSurrenderTrigger setTriggerArea [20, 20, 0, false];
+doSurrenderTrigger setTriggerType "NONE";
+doSurrenderTrigger setTriggerActivation ["ANY", "PRESENT", true];
+doSurrenderTrigger setTriggerStatements ["(({ isPlayer _x } count thisList) >= ({ side _x == independent } count thisList)) && (vehicle insurgentLeader == insurgentLeader) && (insurgentLeader in thisList)", "[insurgentLeader, true] spawn A455_fnc_doSurrender", "[insurgentLeader, false] spawn A455_fnc_doSurrender"]; // 
+doSurrenderTrigger setTriggerInterval 1;
+_0 = doSurrenderTrigger spawn {
+	while {alive insurgentLeader} do {
+		_this attachTo [insurgentLeader, [0,0,0]];
+		sleep 0.5;
+	};
+};
 
 // ------------------------------------------------------------------------------------------------
 // STARTING VEHICLE + GROUP
@@ -54,6 +60,10 @@ while {(_leaderStart isEqualTo [0,0]) || _leaderStart isEqualTo [0,0,0]} do {
 A455_leaderVehicle = createVehicle [_leaderVehicleChoice, _leaderStart, [], 0, "NONE"];
 publicVariable "A455_leaderVehicle";
 A455_leaderVehicle call A455_fnc_addSearchForIntel;
+
+private _config = "configName _x == typeOf A455_leaderVehicle" configClasses (configFile >> "CfgVehicles");
+A455_leaderVehicleType = [_config select 0, "textSingular"] call BIS_fnc_returnConfigEntry;
+publicVariable "A455_leaderVehicleType";
 
 insurgentLeader assignAsDriver A455_leaderVehicle;
 insurgentLeader moveInDriver A455_leaderVehicle;
@@ -91,7 +101,7 @@ if (A455_DEBUG_MODE) then {
 private _leaderDestination = [0,0];
 while {(_leaderDestination isEqualTo [0,0]) || _leaderDestination isEqualTo [0,0,0]} do {
 	// TODO: Change upper & lower bounds based on difficulty?
-	_leaderDestination = [["mkr_ao"], ["mkr_blacklist_0"],  { (isOnRoad _this) && (count (_this nearObjects ["Building", 100]) >= 10) && ((_leaderStart distance _this > 2000) && (_leaderStart distance _this < 10000)) }] call BIS_fnc_randomPos;
+	_leaderDestination = [["mkr_ao"], ["mkr_blacklist_0"],  { (isOnRoad _this) && (count (_this nearObjects ["House", 100]) >= 10) && ((_leaderStart distance _this > 2000) && (_leaderStart distance _this < 10000)) }] call BIS_fnc_randomPos;
 };
 
 if (A455_DEBUG_MODE) then {
@@ -99,7 +109,7 @@ if (A455_DEBUG_MODE) then {
 	private _marker = createMarker [_name, _leaderDestination];  
 	_marker setMarkerType "hd_dot";  
 	_marker setMarkerColor "ColorRed";  
-	_marker setMarkerText ("_leaderDestination" + str _leaderDestination + " - " + str count (_leaderDestination nearObjects ["Building", 100])); 
+	_marker setMarkerText ("_leaderDestination" + str _leaderDestination + " - " + str count (_leaderDestination nearObjects ["House", 100])); 
 };
 
 // Set destination as 1st waypoint
